@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-PT">
 
 <head>
@@ -23,238 +24,195 @@
 
   <main>
 
-    <!-- 1. MÚSICA -->
-    <section class="screen active" id="intro">
+```
+<!-- 1. INTRO -->
+<section class="screen active" id="intro">
 
-      <div class="tiny-heart">♡</div>
+  <div class="tiny-heart">♡</div>
 
-      <p class="eyebrow">UMA PEQUENA SURPRESA</p>
+  <p class="eyebrow">UMA PEQUENA SURPRESA</p>
 
-      <h1>Mariana,</h1>
+  <h1>Mariana,</h1>
 
-      <p class="lead">
-        preparei uma coisa muito especial para ti...
-      </p>
+  <p class="lead">
+    preparei uma coisa muito especial para ti...
+  </p>
 
-      <button class="primary" onclick="openMusic()">
-        🎵 Ouvir a nossa música
-      </button>
+  <button class="primary" onclick="openGift()">
+    Abrir a minha prenda ❤️
+  </button>
 
-      <p class="signature">
-        com todo o meu amor,<br>
-        Rodrigo
-      </p>
+  <p class="signature">
+    com todo o meu amor,<br>
+    Rodrigo
+  </p>
 
-    </section>
+</section>
 
 
-    <!-- 2. MÚSICA ABERTA -->
-    <section class="screen" id="musicScreen">
+<!-- 2. GIFT -->
+<section class="screen" id="giftScreen">
 
-      <p class="eyebrow">A NOSSA MÚSICA</p>
+  <p class="eyebrow">A TUA PRENDA</p>
 
-      <div class="music-card">
+  <div class="gift-wrap" onclick="openBox()">
 
-        <div class="album-placeholder">♪</div>
+    <div class="gift-lid">
+      <div class="bow"></div>
+    </div>
 
-        <div>
-          <p class="music-label">A nossa música</p>
-          <h3>Orbiter</h3>
-          <p>Noah Kahan</p>
-        </div>
+    <div class="gift-box">
+      <div class="ribbon vertical"></div>
+      <div class="ribbon horizontal"></div>
+      <div class="box-inside"></div>
+    </div>
 
-        <iframe
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/4W6yulge3h7FSy0zGFrNKs"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
+  </div>
 
-      </div>
+  <p class="hint" id="giftHint">
+    Clica na caixa para a abrir...
+  </p>
 
-      <button class="primary small" onclick="openGift()">
-        Abrir a minha prenda <span>♥</span>
-      </button>
+</section>
 
-    </section>
 
+<!-- 3. PHOTOS -->
+<section class="screen" id="photosScreen">
 
-    <!-- 3. GIFT -->
-    <section class="screen" id="giftScreen">
+  <p class="eyebrow">AS NOSSAS MEMÓRIAS</p>
 
-      <p class="eyebrow">A TUA PRENDA</p>
+  <h2>
+    Alguns dos meus momentos favoritos contigo.
+  </h2>
 
-      <div class="gift-wrap" onclick="openBox()">
+  <div class="photo-cloud" id="photoCloud"></div>
 
-        <div class="gift-lid">
-          <div class="bow"></div>
-        </div>
+  <button class="primary small" onclick="showLetter()">
+    Continuar <span>→</span>
+  </button>
 
-        <div class="gift-box">
-          <div class="ribbon vertical"></div>
-          <div class="ribbon horizontal"></div>
-          <div class="box-inside"></div>
-        </div>
+</section>
 
-      </div>
 
-      <p class="hint" id="giftHint">
-        Clica na caixa para a abrir...
-      </p>
+<!-- 4. LETTER -->
+<section class="screen" id="letterScreen">
 
-    </section>
+  <p class="eyebrow">UMA PEQUENA CARTA PARA TI</p>
 
+  <div class="letter">
 
-    <!-- 4. PHOTOS -->
-    <section class="screen" id="photosScreen">
+    <div class="letter-mark">♡</div>
 
-      <p class="eyebrow">AS NOSSAS MEMÓRIAS</p>
+    <p>Mariana,</p>
 
-      <h2>
-        Alguns dos meus momentos favoritos contigo.
-      </h2>
+    <p>
+      Desde que entraste na minha vida, tudo ficou mais bonito.
+      Cada momento contigo tornou-se uma memória que quero guardar para sempre.
+    </p>
 
-      <div class="photo-cloud" id="photoCloud"></div>
+    <p>
+      Obrigado por todos os sorrisos, por todos os momentos
+      e principalmente por seres tu.
+    </p>
 
-      <button class="primary small" onclick="showLetter()">
-        Continuar <span>→</span>
-      </button>
+    <p>
+      Espero que gostes desta pequena surpresa tanto quanto eu gostei de a fazer.
+    </p>
 
-    </section>
+    <p>
+      Eu amote sem tracinho porque nada nos separa.
+    </p>
 
+    <p class="letter-sign">
+      Rodrigo ❤️
+    </p>
 
-    <!-- 5. LETTER -->
-    <section class="screen" id="letterScreen">
+  </div>
 
-      <p class="eyebrow">UMA PEQUENA CARTA PARA TI</p>
+  <button class="primary small" onclick="showFlowers()">
+    Ainda não acabou... <span>→</span>
+  </button>
 
-      <div class="letter">
+</section>
 
-        <div class="letter-mark">♡</div>
 
-        <p>Mariana,</p>
+<!-- 5. FLOWERS -->
+<section class="screen" id="flowersScreen">
 
-        <p>
-          Desde que entraste na minha vida, tudo ficou mais bonito.
-          Cada momento contigo tornou-se uma memória que quero guardar para sempre.
-        </p>
+  <p class="eyebrow">PORQUE MERECES O MELHOR</p>
 
-        <p>
-          Obrigado por todos os sorrisos, por todos os momentos
-          e principalmente por seres tu.
-        </p>
+  <div class="tulips" id="tulips"></div>
 
-        <p>
-          Espero que gostes desta pequena surpresa tanto quanto eu gostei de a fazer.
-        </p>
+  <h2>Um ramo só para ti. 🌷</h2>
 
-        <p>
-          Eu amote sem tracinho porque nada nos separa.
-        </p>
+  <p class="soft">
+    E ainda há mais algumas coisas lá dentro...
+  </p>
 
-        <p class="letter-sign">
-          Rodrigo ❤️
-        </p>
+  <button class="primary small" onclick="showReasons()">
+    Continuar <span>→</span>
+  </button>
 
-      </div>
+</section>
 
-      <button class="primary small" onclick="showFlowers()">
-        Ainda não acabou... <span>→</span>
-      </button>
 
-    </section>
+<!-- 6. REASONS -->
+<section class="screen" id="reasonsScreen">
 
+  <p class="eyebrow">ALGUMAS RAZÕES</p>
 
-    <!-- 6. FLOWERS -->
-    <section class="screen" id="flowersScreen">
+  <h2>Porque gosto tanto de ti...</h2>
 
-      <p class="eyebrow">PORQUE MERECES O MELHOR</p>
+  <div class="notes">
 
-      <div class="tulips" id="tulips"></div>
+    <div>És a minha alegria ♡</div>
+    <div>Tens uns olhos lindos</div>
+    <div>Fazes-me sentir em casa</div>
+    <div>És incrível por dentro e por fora</div>
+    <div>Adoro cada momento contigo</div>
+    <div>És única ❤️</div>
 
-      <h2>Um ramo só para ti. 🌷</h2>
+  </div>
 
-      <p class="soft">
-        E ainda há mais algumas coisas lá dentro...
-      </p>
+  <button class="primary small" onclick="showFinal()">
+    Continuar <span>→</span>
+  </button>
 
-      <button class="primary small" onclick="showReasons()">
-        Continuar <span>→</span>
-      </button>
+</section>
 
-    </section>
 
+<!-- 7. FINAL -->
+<section class="screen final-screen" id="finalScreen">
 
-    <!-- 7. REASONS -->
-    <section class="screen" id="reasonsScreen">
+  <div class="final-glow"></div>
 
-      <p class="eyebrow">ALGUMAS RAZÕES</p>
+  <p class="eyebrow">A NOSSA HISTÓRIA</p>
 
-      <h2>Porque gosto tanto de ti...</h2>
+  <h1>
+    A melhor parte<br>
+    da nossa história<br>
+    <em>ainda está por escrever.</em>
+  </h1>
 
-      <div class="notes">
+  <p class="final-text">
+    E eu quero viver tudo isso contigo.
+  </p>
 
-        <div>És a minha alegria ♡</div>
-        <div>Tens uns olhos lindos</div>
-        <div>Fazes-me sentir em casa</div>
-        <div>És incrível por dentro e por fora</div>
-        <div>Adoro cada momento contigo</div>
-        <div>És única ❤️</div>
+  <div class="final-heart">♥</div>
 
-      </div>
+  <p class="signature">
+    Eu amo-te, Mariana.<br><br>
+    — Rodrigo
+  </p>
 
-      <button class="primary small" onclick="showFinal()">
-        Continuar <span>→</span>
-      </button>
+  <button class="ghost" onclick="goHome()">
+    ↻ Voltar ao início
+  </button>
 
-    </section>
-
-
-    <!-- 8. FINAL -->
-    <section class="screen final-screen" id="finalScreen">
-
-      <div class="final-glow"></div>
-
-      <p class="eyebrow">A NOSSA HISTÓRIA</p>
-
-      <h1>
-        A melhor parte<br>
-        da nossa história<br>
-        <em>ainda está por escrever.</em>
-      </h1>
-
-      <p class="final-text">
-        E eu quero viver tudo isso contigo.
-      </p>
-
-      <div class="final-heart">♥</div>
-
-      <p class="signature">
-        Eu amo-te, Mariana.<br><br>
-        — Rodrigo
-      </p>
-
-      <button class="ghost" onclick="goHome()">
-        ↻ Voltar ao início
-      </button>
-
-    </section>
+</section>
+```
 
   </main>
-
-
-  <script>
-
-    function openMusic() {
-      document.querySelector("#intro").classList.remove("active");
-      document.querySelector("#musicScreen").classList.add("active");
-    }
-
-  </script>
 
   <script src="script.js"></script>
 
